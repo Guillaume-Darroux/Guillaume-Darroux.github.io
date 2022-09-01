@@ -1,12 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Import de la police Railway -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- L'ordre d'import des fichiers de style est important : en cas d'égalité sur le ciblage de l'élement, c'est le dernier style défini qui s'applique ! -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <!-- Bonne pratique, on notre fichier de style personnalisé en dernier -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>oFig</title>
 </head>
 <body>
-    <h1>Salut les Kelvins !</h1>
+  <div>
+    <header class="header">
+      <h1 class="header__title"><strong class="header__title--big">oFig</strong>Figurines et statuettes</h1>
+      <h2 class="header__subtitle">Figures sur le thème <em class="header__subtitle--italic">Final Fantasy</em></h2>
+      <img src="./images/cart.svg" alt="logo-panier">
+     </header>
+
+    <main>
+      <ul class="product-list">
+
+        <li>
+          <article class="product">
+            <img class="product__image" src="./images/aerith.png" alt="Aerith">
+            <h2 class="product__game-name">Final Fantasy Crisis Core</h2>
+            <h1 class="product__name">Aerith Gainsborough</h1>
+            <p>Figurine de 7 pouces - livrée avec son packagaging</p>
+            <div class="product__footer">
+              <a class="product__add-to-cart"href="#">Ajouter au panier</a>
+              <div class="product__prices">
+                <span class="product__price">54,90€</span>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="product">
+            <img class="product__image" src="./images/cloud-ac.png" alt="Cloud Strife Remake">
+            <div class="product__reduction-tag">- 20%</div>
+            <h2 class="product__game-name">Final Fantasy VIIe</h2>
+            <h1 class="product__name">Cloud Strinf Remake</h1>
+            <p>Figurine de 8 pouces - livrée avec son packagaging</p>
+            <div class="product__footer">
+              <a class="product__add-to-cart"href="#">Ajouter au panier</a>
+              <div class="product__prices">
+                <span class="product__price--reducted">74,90€</span>
+                <span class="product__price">59€</span>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="product">
+            <img class="product__image" src="./images/cloud-ac.png" alt="Cloud Strife Remake">
+            <h2 class="product__game-name">Final Fantasy VIIe</h2>
+            <h1 class="product__name">Cloud Strinf Remake</h1>
+            <p>Figurine de 8 pouces - livrée avec son packagaging</p>
+            <div class="product__footer">
+              <a class="product__add-to-cart"href="#">Ajouter au panier</a>
+              <div class="product__prices">
+                <span class="product__price--reducted">74,90€</span>
+                <span class="product__price">59€</span>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="product">
+            <img class="product__image" src="./images/cloud-ac.png" alt="Cloud Strife Remake">
+            <h2 class="product__game-name">Final Fantasy VIIe</h2>
+            <h1 class="product__name">Cloud Strinf Remake</h1>
+            <p>Figurine de 8 pouces - livrée avec son packagaging</p>
+            <div class="product__footer">
+              <a class="product__add-to-cart"href="#">Ajouter au panier</a>
+              <div class="product__prices">
+                <span class="product__price--reducted">74,90€</span>
+                <span class="product__price">59€</span>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="product">
+            <img class="product__image" src="./images/cloud-ac.png" alt="Cloud Strife Remake">
+            <h2 class="product__game-name">Final Fantasy VIIe</h2>
+            <h1 class="product__name">Cloud Strinf Remake</h1>
+            <p>Figurine de 8 pouces - livrée avec son packagaging</p>
+            <div class="product__footer">
+              <a class="product__add-to-cart"href="#">Ajouter au panier</a>
+              <div class="product__prices">
+                <span class="product__price--reducted">74,90€</span>
+                <span class="product__price">59€</span>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="product">
+            <img class="product__image" src="./images/cloud-ac.png" alt="Cloud Strife Remake">
+            <h2 class="product__game-name">Final Fantasy VIIe</h2>
+            <h1 class="product__name">Cloud Strinf Remake</h1>
+            <p>Figurine de 8 pouces - livrée avec son packagaging</p>
+            <div class="product__footer">
+              <a class="product__add-to-cart"href="#">Ajouter au panier</a>
+              <div class="product__prices">
+                <span class="product__price--reducted">74,90€</span>
+                <span class="product__price">59€</span>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="product">
+            <img class="product__image" src="./images/cloud-ac.png" alt="Cloud Strife Remake">
+            <h2 class="product__game-name">Final Fantasy VIIe</h2>
+            <h1 class="product__name">Cloud Strinf Remake</h1>
+            <p>Figurine de 8 pouces - livrée avec son packagaging</p>
+            <div class="product__footer">
+              <a class="product__add-to-cart"href="#">Ajouter au panier</a>
+              <div class="product__prices">
+                <span class="product__price--reducted">74,90€</span>
+                <span class="product__price">59€</span>
+              </div>
+            </div>
+          </article>
+        </li>
+
+      </ul>
+    </main>
+  </div>
+  
+  <footer class="footer">
+    <p>oFig - toutes les images sont sous copyright SquareEnix</p>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,294 @@
+:root {
+  --color-red: #c80000;
+  --color-diabolus-grey: #666;
+  --color-light-grey: #ccc;
+  --color-black: black;
+  --color-white: white;
+}
+
+html {
+  font-size: 10px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  color: var(--color-white);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1; /* Le plus "haut" sur l'axe des z (qui vient vers nous) => on est au dessus de 0, donc notre header va se positionner à coup sûr au dessus des articles */ 
+}
+
+.header__title {
+  padding: 20px;
+  background-color: var(--color-red);
+}
+
+.header__title--big {
+  font-size: 40px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.header__subtitle {
+  text-align: center;
+  background-color: var(--color-diabolus-grey);
+  font-size: 1.8rem;
+  padding: 10px 0;
+  font-weight: 200;
+}
+
+.header__subtitle--italic {
+  font-style: italic;
+  font-size: 2rem;
+}
+
+.footer {
+  color: var(--color-white);
+  background-color: var(--color-diabolus-grey);
+  text-align: center;
+  padding: 5px 0 10px 0;
+  width: 100%;
+}
+
+.product-list {
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  width: 250px;
+  border: solid var(--color-light-grey) 1px;
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.product:hover {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  /* Compatibilité avec Safari */
+  --webkit-box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+.product__image {
+  width: 100%;
+}
+
+@keyframes tilt {
+  0%  { transform: rotate(0deg); }
+  25% { transform: rotate(30deg); }
+  50% { transform: rotate(-30deg); }
+  100%  { transform: rotate(0deg); }
+}
+
+.product__reduction-tag {
+  border: 5px solid var(--color-light-grey);
+  border-radius: 100%;
+  background-color: var(--color-diabolus-grey);
+  color: var(--color-white);
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Objectif, je veux déclencher l'animation sur la REDUCTION lorsque je survole l'article */
+
+.product:hover .product__reduction-tag {
+  animation: tilt 0.8s infinite;
+}
+
+.product__game-name {
+  color: var(--color-light-grey);
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--color-light-grey);
+}
+
+.product__name {
+  font-size: 2rem;
+  margin: 20px 0;
+  font-weight: 600;
+}
+
+.product__footer {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+
+  font-size: 1.15rem;
+
+  background-color: var(--color-red);
+  padding: 20px;
+  margin-top: 30px;
+  color: var(--color-white);
+}
+
+.product__prices {
+  display: flex;
+  align-items: end;
+}
+
+.product__price--reducted {
+  text-decoration: line-through;
+  margin-right: 5px;
+}
+
+.product__price {
+  font-weight: 600;
+  font-size: 1.4em;
+}
+
+
+
+/* contact.html */
+
+h4 {
+  margin-bottom: 15px;
+  color: rgb(80, 78, 78);
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+label {
+  font-size: 13px;
+}
+
+.shipping-info {
+  width: 60%;
+  height: calc(100vh - 151px);
+  margin: auto;
+}
+
+.shipping-info h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 30px;
+}
+
+.legend-shipping {
+  margin-bottom: 15px;
+  color: rgb(80, 78, 78);
+  font-weight: bold;
+}
+
+.legend-options {
+  margin-bottom: 15px;
+  color: rgb(80, 78, 78);
+  font-weight: bold;
+}
+
+.fieldset-options {
+  margin: 30px;
+}
+
+.fieldset-options div {
+  margin-bottom: 5px;
+}
+
+.legend-address {
+  margin-bottom: 15px;
+  color: rgb(80, 78, 78);
+  font-weight: bold;
+}
+
+.fieldset-shipping-choice {
+  margin: 0px 30px;
+}
+
+.shipping-info fieldset {
+/*   border: 1px solid #f0f;
+ */}
+
+form {
+/*   background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  }
+
+ .fieldset-address {
+  align-self: flex-end;
+ }
+
+ .div-total-amount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 90px;
+}
+
+ .total-amount {
+  font-size: 17px;
+  font-weight: bold;
+ }
+
+ .amount-price {
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+ }
+
+ .continue-buying {
+  background-color: rgb(247, 247, 247);
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+ }
+
+ .div-submit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 90px;
+  border-bottom: 1px solid rgb(180, 180, 180);
+  border-top: 1px solid  rgb(180, 180, 180);
+ }
+
+ .pay {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #c80000;
+  padding: 15px 30px;
+  border: none;
+ }
+
+ .div-address {
+  margin: 10px 0;
+ }
+
+ input {
+  background-color: rgb(247, 247, 247);
+  border: none;
+  border-bottom: 1px solid var(--color-diabolus-grey);
+ }
+
+ textarea {
+  background-color: rgb(247, 247, 247);
+  border: none;
+  border-bottom: 1px solid var(--color-diabolus-grey);
+ }
